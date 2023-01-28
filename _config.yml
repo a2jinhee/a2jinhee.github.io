@@ -54,3 +54,6 @@ plugins:
 #   - vendor/ruby/
 
 include: ["_pages", "_posts"]
+
+# Color scheme supports "light" (default) and "dark"
+color_scheme: dark
