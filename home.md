@@ -1,18 +1,44 @@
 ---
-layout: about
+layout: page
 title: Home
-permalink: /:title/
 nav_order: 1
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100'
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+html,body; {
+  font-family: 'Roboto Mono', monospace;
+  background: #212121;
+  height: 100%;
+}
+  
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+.container{
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex; 
+}
+  
+.text{
+  font-weight: 300;
+  font-size: 40px;
+}
+  
+</style>
 
-[jekyll-organization]: https://github.com/jekyll
+<div class="container">
+  <div class="text">
+  <script src="/assets/js/typing-effect.js"></script>
+  </div>
+</div>
+
+<br>
+<br>
+
+{: .warning }
+
+> This site is undergoing construction, so some information may be incorrect.  
+> For any questions, please contact me through [instagram](https://www.instagram.com/code_nasa/?hl=en)!
