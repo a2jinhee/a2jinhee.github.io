@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ROS
+title: Robotics
 nav_order: 3
 has_children: true
 ---

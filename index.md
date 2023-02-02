@@ -30,13 +30,13 @@ html,body; {
   
 </style>
 
+<br>
 <div class="container">
   <div class="text">
   <script src="/assets/js/typing-effect.js"></script>
   </div>
 </div>
 
-<br>
 <br>
 
 {: .warning }
