@@ -1,6 +1,6 @@
 ---
 layout: default
-title: CTF2
+title: picoCTF Forensics
 parent: CTF
 nav_order: 2
 ---

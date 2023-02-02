@@ -61,13 +61,13 @@ class TextScramble {
 // ——————————————————————————————————————————————————
 
 const phrases = [
-  "Hello, visitor.",
-  "Welcome to my site!",
+  "Hello, visitor!",
+  "Welcome to my site.",
   "What are you interested in?",
   "Robotics?",
   "Web Development?",
   "Hacking?",
-  "I have them all.",
+  "- Enjoy!",
 ];
 
 const el = document.querySelector(".text");
