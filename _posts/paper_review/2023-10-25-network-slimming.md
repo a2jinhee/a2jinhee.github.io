@@ -3,13 +3,14 @@ layout: minimal
 title: CNN Network Slimming
 nav_exclude: true
 parent: Paper Review
+math: mathjax3
 ---
 
 ## Learning Efficient Convolutional Networks through Network Slimming
 
 _2022.10.25_  
  <br>
-I actually tried this out, and got similar results!
+I actually tried this out, and got similar results!  
 **Keywords: #Pruning #Quantization #Batch Normalization**
 
 ---
@@ -47,7 +48,10 @@ I actually tried this out, and got similar results!
 
 > Advantages of Channnel-level Sparsity
 
-- Sparsity - can be realized at different levels (ex) **weight level, kernel level, channel level, layer level** - Weight-level (fine-grained level): highest flexibility and generality, higher compression rate → but requires special software/hardware accelerators to do fast inference - Layer-level (coarsest level): does not require special packages to harvest the inference speedup → but less flexible, only effective in depth is sufficiently large (>50 layers) - **Channel-level**: nice tradeoff between flexibility and ease of implementation → for FC, treat each neuron as a channel
+- Sparsity - can be realized at different levels (ex) **weight level, kernel level, channel level, layer level**
+- Weight-level (fine-grained level): highest flexibility and generality, higher compression rate → but requires special software/hardware accelerators to do fast inference
+- Layer-level (coarsest level): does not require special packages to harvest the inference speedup → but less flexible, only effective in depth is sufficiently large (>50 layers)
+- **Channel-level**: nice tradeoff between flexibility and ease of implementation → for FC, treat each neuron as a channel
   > Challenges for channel-level sparsity
 - channel-level sparsity requires pruning all the incoming and outgoing connections associated with a channel
   → the method of directly pruning weights on a pre-trained model is ineffective
@@ -57,8 +61,16 @@ I actually tried this out, and got similar results!
 > Solution for challenge: Scaling Factors and Sparsity-induced Penalty
 
 - **Introduce a scaling factor $\gamma$ for each channel**, which is multiplied to the output of that channel
+
+\[
+L = \Sigma_{(x,y)} l(f(x, W), y) +\lambda \Sigma 
+ _{\gamma \in \Gamma} g(\gamma)
+\]
+
 - Then, jointly train the network weights and these scaling factors, with **sparsity regularization imposed on the latter**
-- $g()$ is a sparsity induced penalty on the scaling factors; **we choose L1-norm $g(s) = |s|$ , to achieve sparsity**
+
+- $g()$ is a sparsity induced penalty on the scaling factors; **we choose L1-norm $g(s) = \|s\|$, to achieve sparsity**
+
 - **The scaling factors act as the agents for channel selection.**
   > Leveraging the Scaling Factors in BN Layers
 - BN layer normalizes the internal activaions using mini-batch statistics
@@ -85,7 +97,7 @@ I actually tried this out, and got similar results!
 **5. Analysis**
 
 - Two crucial hyper-parameters in network slimming
-  1. pruned percentage $t$
+  1. pruned percentage $\text{t}$
   2. regularization term $\lambda$
 
 > **Effect of Pruned Percentage**
@@ -101,3 +113,18 @@ I actually tried this out, and got similar results!
 - High? the scaling factors are more and more concentrated near zero
 - Low? No sparsity regularization, the distribution is relatively flat
 - **This process can be seen as a feature selection happening in intermediate layers of deep networks, where only channels with non-negligible scaling factors are chosen.**
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\[', '\]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
