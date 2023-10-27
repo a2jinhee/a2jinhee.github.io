@@ -1,6 +1,6 @@
 ---
 layout: minimal
-title: CNN Network Slimming
+title: Network Slimming
 nav_exclude: true
 parent: Paper Review
 math: mathjax3
@@ -10,7 +10,7 @@ math: mathjax3
 
 _2022.10.25_  
  <br>
-I actually tried this out, and got similar results!  
+I actually tried this out, and got similar results!   
 **Keywords: #Pruning #Quantization #Batch Normalization**
 
 ---

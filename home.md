@@ -38,7 +38,7 @@ Instagram: [code_nasa](https://www.instagram.com/code_nasa/?hl=en)
 ---
 
 - Projects
-- Academic Papers
+- Paper Review
 - Fun
 
 ---
