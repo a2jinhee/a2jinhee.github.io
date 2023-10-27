@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Home
 nav_order: 1
 ---
@@ -12,7 +12,6 @@ html,body; {
   background: #212121;
   height: 100%;
 }
-  
 
 .container{
   height: 100%;
@@ -23,11 +22,30 @@ html,body; {
 }
   
 .text{
-  font-weight: 300;
-  font-size: 40px;
+  font-weight: 500;
+  font-size: 30px;
 }
   
 </style>
+
+# Jinhee Kim
+
+EEE at SKKU  
+Contact: a2jinhee@gmail.com  
+Github: [a2jinhee](https://github.com/a2jinhee?tab=repositories)  
+Instagram: [code_nasa](https://www.instagram.com/code_nasa/?hl=en)
+
+---
+
+- Projects
+- Academic Papers
+- Fun
+
+---
+
+## Projects
+
+---
 
 <br>
 <div class="container">
