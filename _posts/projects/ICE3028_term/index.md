@@ -19,3 +19,6 @@ Term project for ICE3028, a fun project using Arduino Nano, BLE communication, G
 ***log*** 
 
 1. Magic Wand github code review: [magic_wand↪](./magic_wand.md)
+
+2. (Nano 33 BLE Sense) BLE Communication: [BLE communication↪](./ble_communication.md)
+
