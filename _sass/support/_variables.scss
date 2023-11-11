@@ -87,6 +87,7 @@ $spacers: (
   sp-8: $spacing-unit * 3,
   sp-9: $spacing-unit * 3.5,
   sp-10: $spacing-unit * 4,
+  sp-11: $spacing-unit * 10, // custom 
 ) !default;
 $sp-1: map-get($spacers, sp-1) !default; // 0.25 rem == 4px
 $sp-2: map-get($spacers, sp-2) !default; // 0.5  rem == 8px
@@ -98,6 +99,7 @@ $sp-7: map-get($spacers, sp-7) !default; // 2.5  rem == 40px
 $sp-8: map-get($spacers, sp-8) !default; // 3    rem == 48px
 $sp-9: map-get($spacers, sp-9) !default; // 3.5  rem == 56px
 $sp-10: map-get($spacers, sp-10) !default; // 4  rem == 64px
+$sp-11: map-get($spacers, sp-11) !default; // 10  rem == 160px
 
 // Borders
 
