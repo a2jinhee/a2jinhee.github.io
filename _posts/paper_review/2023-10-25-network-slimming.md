@@ -1,6 +1,6 @@
 ---
 layout: minimal
-title: Network Slimming
+title: Learning Efficient Convolutional Networks through Network Slimming
 nav_exclude: true
 parent: Paper Review
 math: mathjax3

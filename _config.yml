@@ -82,3 +82,8 @@ back_to_top: true
 back_to_top_text: "&#8679; Back to top &#8679;"
 
 footer_content: 'Copyright &copy; Jinhee Kim. Made by Jekyll theme, <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>'
+
+mermaid:
+  # Version of mermaid library
+  # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
+  version: "9.1.3"

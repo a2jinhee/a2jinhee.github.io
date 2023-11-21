@@ -1,6 +1,7 @@
 ---
 layout: minimal
-title: Deep Compression
+title: >
+  Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding
 nav_exclude: true
 parent: Paper Review
 math: mathjax3
