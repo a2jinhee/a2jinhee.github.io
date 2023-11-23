@@ -33,7 +33,10 @@ _2022.11.21_
 
 
 **2. Related Work**
-
+- Low-Precision Deep Neural Networks
+    - Binarized Neural Networks, XNOR-Net 
+    - Quantization Operator
+    - Straight Through Estimator(STE)
 
 
 <script>

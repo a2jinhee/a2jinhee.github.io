@@ -55,7 +55,20 @@ Quantization Survey
 - Quantization: A method to map from input values in a large(continuous) set to output values in a small (finite) set
 - ex) Shannon's lossless coding theory (Variable-rate quantization), Huffman Coding, Pulse Code Modulation
 - Quantization in NN
-    - 
+    1. Inference and training of NNs are both computationally intensive
+    → Efficient representation of numerical values is important
+    2. Current NNs are heavily over-parametrized
+    → Ample opportunity for reducing bit precision without impacting accuracy. 
+    3. **NNs are very robust to aggressive quantization and extreme discretization**
+    → This new DOF comes from the sheer number of parameters involved
+    4. The layered structure of NN models offers an additional dimension to explore
+    → Different layers have different impact on the loss function, and this motivates a **mixed-precision approach** to quantization 
+
+    ▵ Thus, it is possible to have high error/distance between quantized model and the original model, while still attaining very good generalization performance. 
+
+## 3. Basic Concepts of Quantization 
+### 1) Problem Setup and Notations
+  - In quantization, the goal is to reduce the precision of both the parameters, as well as the intermediate activation maps to low-precision, with minimal impact on the generalization power/accuracy of the model. 
 
 <script>
 MathJax = {
