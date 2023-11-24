@@ -68,25 +68,29 @@ $$
     - **Uniform quantization strategy**: 
         - Normalize weights to [0,1]:  
         [graph](https://www.desmos.com/calculator/1du8fwsskp)  
-        $$
+        <!-- $$
         w' = \frac{tanh(w)}{2\max(|tanh(w)|)}+0.5
-        $$   
+        $$ --> 
+        <div align="center"><img style="background: white;" src="https://latex.codecogs.com/svg.latex?%20%20%20%20%20%20%20%20w'%20%3D%20%5Cfrac%7Btanh(w)%7D%7B2%5Cmax(%7Ctanh(w)%7C)%7D%2B0.5"></div>   
         - Quantize normalized value into N-bit integer   
-        $$
-        w_Q' = INT(round(w'* MAX_N)) → s' = 1/MAX_N
-        $$
+        <!-- $$
+        w_Q' = INT(round(w'* MAX_N)) \quad s' = 1/MAX_N
+        $$ --> 
+        <div align="center"><img style="background: white;" src="https://latex.codecogs.com/svg.latex?%20%20%20%20%20%20%20%20w_Q'%20%3D%20INT(round(w'*%20MAX_N))%20%5Cquad%20s'%20%3D%201%2FMAX_N"></div> 
         where $MAX_N$ denotes the upper-bound of N-bit integer
         - Values remapped to approximate the range of floating point values to obtain
-        $$
+        <!-- $$
         w_Q = 2*w_Q'-1 \quad s = \mathbb{E}(|w|)/MAX_N
-        $$
+        $$ --> 
+        <div align="center"><img style="background: white;" src="https://latex.codecogs.com/svg.latex?%20%20%20%20%20%20%20%20w_Q%20%3D%202*w_Q'-1%20%5Cquad%20s%20%3D%20%5Cmathbb%7BE%7D(%7Cw%7C)%2FMAX_N"></div> 
         - Approximate $w$ with $s*w_Q$
 
     - Forward Pass
         - Execute feed-forward pass with quantized weights:
-        $$
+        <!-- $$
         y' = s*(w_Q \cdot x_Q) + b
-        $$
+        $$ --> 
+        <div align="center"><img style="background: white;" src="https://latex.codecogs.com/svg.latex?%20%20%20%20%20%20%20%20y'%20%3D%20s*(w_Q%20%5Ccdot%20x_Q)%20%2B%20b"></div>
         Overload of notation 's' - (1) quantization scaling factor for weights, (2) layer-wise scaling factor to reduce output range variation 
 
     - Backward Pass
@@ -94,4 +98,4 @@ $$
         - **Straight through estimator (STE)**: Used to approximate gradients   
             (ex) round op. has zero derivatives everywhere (why? because it's a step function). With STE, the gradient of round op. is 1. 
 
-- **Activations.**  
+- **Activations.** 
