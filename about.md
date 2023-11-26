@@ -1,10 +1,10 @@
 ---
 layout: about
-title: Who am I?
+title: About
 nav_order: 2
 ---
 
-# Who am I?
+# About
 
 <br>
 
@@ -17,7 +17,3 @@ I am ...
 - ... and last but not least, book-lover!
 
 ---
-
-This blog will be very nerdy and tech-y.  
-If you're interested, welcome!  
-If not, shoo!

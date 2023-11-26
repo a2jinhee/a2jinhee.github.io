@@ -30,12 +30,22 @@ html,body; {
   
 </style>
 
-<br>
+<!-- <br>
 <div class="container">
   <div class="text">
   <script src="/assets/js/typing-effect.js"></script>
   </div>
-</div>
+</div> -->
+
+# Jinhee Kim
+
+EEE at SKKU  
+Contact: a2jinhee@gmail.com  
+Github: [a2jinhee](https://github.com/a2jinhee?tab=repositories)  
+Instagram: [code_nasa](https://www.instagram.com/code_nasa/?hl=en)
+
+---
+
 
 <br>
 

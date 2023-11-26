@@ -72,23 +72,26 @@ $$ -->
     - Normalize weights to [0,1]:  
     [graph](https://www.desmos.com/calculator/1du8fwsskp)  
     <!-- $$
-    w' = \frac{tanh(w)}{2\max(|tanh(w)|)}+0.5
+    w' = \frac{tanh(w)}{2\max(|tanh(w)|)}+0.5 = \frac{1}{2}*(\frac{tanh(w)}{\max(|tanh(w)|)}+1)
     $$ --> 
-    <div align="center"><img style="background: white;" src="https://latex.codecogs.com/svg.latex?%20%20%20%20%20%20%20%20w'%20%3D%20%5Cfrac%7Btanh(w)%7D%7B2%5Cmax(%7Ctanh(w)%7C)%7D%2B0.5"></div>   
+    <div align="center"><img style="background: white;" src="https://latex.codecogs.com/svg.latex?%20%20%20%20w'%20%3D%20%5Cfrac%7Btanh(w)%7D%7B2%5Cmax(%7Ctanh(w)%7C)%7D%2B0.5%20%3D%20%5Cfrac%7B1%7D%7B2%7D*(%5Cfrac%7Btanh(w)%7D%7B%5Cmax(%7Ctanh(w)%7C)%7D%2B1)"></div> 
+    Where $\tanh(w)$ limits the range of weights to [-1,1] (normalize before quantization), and $\max|\tanh(w)|$ is the maximum taken over all weights in the layer. By construction, $\tanh(w)/\max|\tanh(w)|$ is still in the range of [-1,1]. Add 1 and half the value to keep the weights in a nice [0,1] range in order to proceed with the scaling step. (▲)
     - Quantize normalized value into N-bit integer     
-
     <!-- $$
-    w_Q' = INT(round(w'* MAX_N)) \quad s' = 1/MAX_N
+    w_Q' = \text{INT}(round(w'* \text{MAX}_N)) \quad s' = 1/\text{MAX}_N
     $$ --> 
-    <div align="center"><img style="background: white;" src="https://latex.codecogs.com/svg.latex?%20%20%20%20%20%20%20%20w_Q'%20%3D%20INT(round(w'*%20MAX_N))%20%5Cquad%20s'%20%3D%201%2FMAX_N"></div> 
-    where $MAX_N$ denotes the upper-bound of N-bit integer
+    <div align="center"><img style="background: white;" src="https://latex.codecogs.com/svg.latex?%20%20%20%20w_Q'%20%3D%20%5Ctext%7BINT%7D(round(w'*%20%5Ctext%7BMAX%7D_N))%20%5Cquad%20s'%20%3D%201%2F%5Ctext%7BMAX%7D_N"></div>  
+    
+    Where $\text{MAX}_N$ denotes the upper-bound of N-bit integer. Because $w'$ is in range [0,1], we only need to multiply $\text{MAX}_N$ and round it to an integer to get $w_Q'$. 
     - Values remapped to approximate the range of floating point values to obtain  
 
     <!-- $$
     w_Q = 2*w_Q'-1 \quad s = \mathbb{E}(|w|)/MAX_N
     $$ --> 
     <div align="center"><img style="background: white;" src="https://latex.codecogs.com/svg.latex?%20%20%20%20%20%20%20%20w_Q%20%3D%202*w_Q'-1%20%5Cquad%20s%20%3D%20%5Cmathbb%7BE%7D(%7Cw%7C)%2FMAX_N"></div> 
+    Do the reverse op. of (▲) so that $w_Q$ becomes the intended quantization. The rationale of multiplying expectation of the weights comes from XNOR-Net. 
     - Approximate $w$ with $s*w_Q$
+    Keeping track of how $w$ was scaled throughout the quantization process,multiply $s$ to the final quantized weight. 
 
 - Forward Pass
     - Execute feed-forward pass with quantized weights:  
@@ -97,7 +100,7 @@ $$ -->
     y' = s*(w_Q \cdot x_Q) + b
     $$ --> 
     <div align="center"><img style="background: white;" src="https://latex.codecogs.com/svg.latex?%20%20%20%20%20%20%20%20y'%20%3D%20s*(w_Q%20%5Ccdot%20x_Q)%20%2B%20b"></div>
-    Overload of notation 's' - (1) quantization scaling factor for weights, (2) layer-wise scaling factor to reduce output range variation 
+    Overload of notation $s$ - (1) quantization scaling factor for weights, (2) layer-wise scaling factor to reduce output range variation 
 
 - Backward Pass
     - Gradients are computed w.r.t the underlying float-value variable $w$(because we use the quantized version $w_Q$, in the feed-forward pass) and updates are applied to $w$ as well.
