@@ -117,11 +117,45 @@ $$ -->
 - Solution 1: Adopt BN layer that calculates running average
 - Problem 2: Still fails
 - Solution 2: (Proposal) Adopt **dynamically changed BN layer** to work with different N in training. Parameters of all BatchNorm layers are kept after training and used in inference. Storage for each bitwidth BN layer is negligible. 
-![](/img/2023-11-25-01-31-57.png){: width="50%"}{: .center-img}
+
 
 #### 3.3.5 Etc. 
 - Knowledge distillation: KD gives ~$\pm$1% boost
 
 ## 4. Experiments
 ### 4.1 Implementation Details
-- For all models, first and last layer is real-valued
+- For all models, first and last layer is real-valued. 
+- In training, we train the networks with bit-width candidates {1,2,4,8,32}
+
+### 4.2 Comparison to Dedicated Models 
+- The proposed any-precision DNN generally achieved comparable performance to the competitive dedicated models. 
+- Any-precision model is more compact
+
+### 4.3 Post-Training Quantization Methods 
+- Compared with three alternative post-training quantization method
+    1. Directly quantizes dedicated models with bit-shifting (truncation)
+        - Simply drop LSB. 
+        - Fails dramatically. 
+    2. Bit-shifting + BatchNorm calibration process
+        - Calibration process: BN statistics is recalculated by feed-forwarding a number of training samples
+        - Worked in 4-bit, but failed in 1, 2 bit settings
+    3. ACIQ
+        - Analytical weight clipping, adaptive bit allocation, bias correction
+    4. (Proposed Method) Calibrate the remaining 3, 5, 6, 7-bit settings to get the missed copies of BN layer params. 
+        - In runtime we can freely choose any precision level from 1 to 8 bits. 
+
+### 4.4 Dynamically Change BN Layers
+- Keeping multiple copies of BN layer params for different bit-widths
+    → Minimized input variations to the convolutional layers
+    → Allow same set of convolutional layer params. to support any-precision in run time
+![](/img/2023-11-25-01-31-57.png){: width="50%"}{: .center-img}
+
+### 4.5 Ablation Studies
+#### Candidate bit-width List 
+How does the candidate bit-width list used during training influence test performance on other bit-widths
+- Training with more candidate bit-width generally leads to better generalization to the others.
+    - i.e. 1,2,4,8-bits combination is better than rest. 
+- Coverage of candidate bit-width matters.
+    - i.e. 1,8-bits combination performs more stable across different runtime bit-width compared with 2,8-bits, 4,8-bits combination  
+
+#### Knowledge Distillation
