@@ -3,6 +3,7 @@ layout: minimal
 title: Any-Precision Deep Neural Networks 
 nav_exclude: true
 parent: Paper Review
+math: mathjax3
 ---
 
 ## Any-Precision Deep Neural Networks 

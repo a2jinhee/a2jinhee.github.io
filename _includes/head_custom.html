@@ -47,7 +47,7 @@
         pointer-events: none;
     }
     </style>
-     
+
   {% when "mathjax2" %}
   
     <script type="text/x-mathjax-config">
@@ -68,6 +68,7 @@
         tex: { 
           tags: 'ams',
           packages: {'[+]': ['textmacros']},
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
         },
         loader: {
           load: ['[tex]/textmacros']
