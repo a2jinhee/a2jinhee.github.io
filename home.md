@@ -30,33 +30,23 @@ html,body; {
 
 # Jinhee Kim
 
-EEE at SKKU  
+BSc in EEE  
 Contact: a2jinhee@gmail.com  
 Github: [a2jinhee](https://github.com/a2jinhee?tab=repositories)  
-Instagram: [code_nasa](https://www.instagram.com/code_nasa/?hl=en)
+LinkedIn: [Jinhee Kim](www.linkedin.com/in/jinhee-kim-63747727b)
 
 ---
 
-- Projects
-- Paper Review
-- Fun
-
----
-
-## Projects
-
----
-
-<br>
+<!-- <br>
 <div class="container">
   <div class="text">
   <script src="/assets/js/typing-effect.js"></script>
   </div>
-</div>
+</div> -->
 
 <br>
 
 {: .warning }
 
 > This site is undergoing construction, so some information may be incorrect.  
-> For any questions, please contact me through [instagram](https://www.instagram.com/code_nasa/?hl=en)!
+> For any questions, please contact me through [email](a2jinhee@gmail.com)!

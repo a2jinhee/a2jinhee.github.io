@@ -8,12 +8,4 @@ nav_order: 2
 
 <br>
 
-I am ...
-
-- an EEE undergraduate
-- web-development enthusiast
-- CTF newbie
-- ROS lurker
-- ... and last but not least, book-lover!
-
----
+Jinhee Kim is a third-year undergraduate student at SKKU EEE. Her research interest is machine learning, especially machine learning in autonomous vehicles and on-device machine learning techniques.
