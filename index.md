@@ -42,7 +42,7 @@ html,body; {
 BSc in EEE  
 Contact: a2jinhee@gmail.com  
 Github: [a2jinhee](https://github.com/a2jinhee?tab=repositories)  
-LinkedIn: [Jinhee Kim](www.linkedin.com/in/jinhee-kim-63747727b)
+LinkedIn: [Jinhee Kim](https://www.linkedin.com/in/jinhee-kim-63747727b)
 
 ---
 
