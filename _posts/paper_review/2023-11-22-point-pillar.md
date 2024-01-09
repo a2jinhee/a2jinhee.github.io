@@ -5,6 +5,7 @@ title: >
 nav_exclude: true
 parent: Paper Review
 math: mathjax3
+nav_order: 231122
 ---
 
 ## PointPillars: Fast Encoders for Object Detection from Point Clouds

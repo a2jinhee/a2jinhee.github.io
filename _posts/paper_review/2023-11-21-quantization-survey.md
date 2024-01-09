@@ -4,6 +4,7 @@ title: A Survey of Quantization Methods for Efficient Neural Network Inference
 nav_exclude: true
 parent: Paper Review
 math: mathjax3
+nav_order: 231121
 ---
 
 ## A Survey of Quantization Methods for Efficient Neural Network Inference

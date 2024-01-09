@@ -4,6 +4,7 @@ title: Learning Efficient Convolutional Networks through Network Slimming
 nav_exclude: true
 parent: Paper Review
 math: mathjax3
+nav_order: 231025
 ---
 
 ## Learning Efficient Convolutional Networks through Network Slimming

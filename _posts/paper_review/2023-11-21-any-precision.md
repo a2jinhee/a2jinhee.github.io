@@ -4,6 +4,7 @@ title: Any-Precision Deep Neural Networks
 nav_exclude: true
 parent: Paper Review
 math: mathjax3
+nav_order: 231121
 ---
 
 ## Any-Precision Deep Neural Networks 

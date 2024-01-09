@@ -79,9 +79,10 @@ permalink: /:categories/:title.html
 
 # Back to top link
 back_to_top: true
-back_to_top_text: "&#8679; Back to top &#8679;"
+back_to_top_text: "⬆"
 
 footer_content: 'Copyright &copy; Jinhee Kim. Made by Jekyll theme, <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>'
+
 
 mermaid:
   # Version of mermaid library

@@ -5,6 +5,7 @@ title: >
 nav_exclude: true
 parent: Paper Review
 math: mathjax3
+nav_order: 231017
 ---
 
 ## Deep Compression: Pruning, Trained Quantization and Huffman Coding
