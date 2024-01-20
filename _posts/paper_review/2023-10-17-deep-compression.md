@@ -1,17 +1,18 @@
 ---
 layout: minimal
 title: >
-  Deep Compression: Pruning, Trained Quantization and Huffman Coding
+  Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding
 nav_exclude: true
 parent: Paper Review
 math: mathjax3
 nav_order: 231017
 ---
 
-## Deep Compression: Pruning, Trained Quantization and Huffman Coding
+## {{page.title}}
+*{{ page.url | split: '/' | last | slice: 0, 10}}*
 
-_2022.10.17_  
  <br>
+
 First paper review on deep compression. Great introduction to pruning and quantization.  
 **Keywords: #Pruning #Quantization #Huffman Coding**
 
