@@ -1,13 +1,13 @@
 ---
 layout: default
-title: 2023 HEVEN Hackathon
+title: HEVEN Hackathon
 parent: Projects
 has_children: true
 has_toc: false
 nav_order: 0
 ---
 
-## 2023 HEVEN Hackathon
+## HEVEN Hackathon
 
 _2023.11.17-2023.11.18_  
 <br>

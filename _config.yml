@@ -81,7 +81,7 @@ permalink: /:categories/:title.html
 back_to_top: true
 back_to_top_text: "⬆"
 
-footer_content: 'Copyright &copy; Jinhee Kim. Made by Jekyll theme, <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>'
+footer_content: '&copy; Jinhee Kim. Powered by <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>'
 
 
 mermaid:

@@ -1,13 +1,13 @@
 ---
 layout: default
-title: 2023 Gyeonggi AI Model/Data Analysis Competition
+title: Gyeonggi Data Analysis Contest
 parent: Projects
 has_children: true
 has_toc: false
 nav_order: 0
 ---
 
-## 2023 Gyeonggi AI Model/Data Analysis Competition
+## Gyeonggi Data Analysis Contest
 
 _2023.09.18-2023.12.15_  
 <br>

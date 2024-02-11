@@ -3,7 +3,7 @@ layout: default
 title: Data Customization for mmdetection3d
 nav_exclude: true
 grand_parent: Projects
-parent: 2023 Gyeonggi AI Model/Data Analysis Competition
+parent: Gyeonggi Data Analysis Contest
 show_toc: true 
 ---
 

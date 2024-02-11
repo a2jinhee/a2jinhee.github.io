@@ -1,11 +1,11 @@
 ---
 layout: default
-title: 2022 KMU Autonomous Driving Contest
+title: KMU Autonomous Driving Contest
 parent: Projects
 nav_order: 0
 ---
 
-## 2022 KMU Autonomous Driving Contest
+## KMU Autonomous Driving Contest
 
 _2022.09.03_  
 <br>

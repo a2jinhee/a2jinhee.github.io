@@ -17,8 +17,8 @@ h2,
   @include fs-6;
 
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  // text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 h3,
@@ -26,17 +26,17 @@ h3,
   @include fs-5;
 
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  // text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 h4,
 .text-delta {
-  @include fs-4;
+  @include fs-5;
 
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  // text-transform: uppercase;
+  letter-spacing: 0.03em;
   background-color: $grey-lt-100;
 }
 

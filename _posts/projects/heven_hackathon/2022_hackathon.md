@@ -3,7 +3,7 @@ layout: default
 title: 2022 Hackathon Github Code Review
 nav_exclude: true
 grand_parent: Projects
-parent: 2023 HEVEN Hackathon
+parent: HEVEN Hackathon
 show_toc: true 
 ---
 

@@ -1,11 +1,11 @@
 ---
 layout: default
-title: 2023 SKKU AI Semiconductor Design Contest
+title: AI Semiconductor Design Contest
 parent: Projects
 nav_order: 0
 ---
 
-## 2023 SKKU AI Semiconductor Design Contest
+## AI Semiconductor Design Contest
 
 _2022.10.26_  
  <br>

@@ -1,16 +1,17 @@
 ---
 layout: default
-title: 2023 Hwasung Autonomous Driving Contest
+title: Hwasung Autonomous Driving Contest
 parent: Projects
+has_children: true
+has_toc: false
 nav_order: 0
 ---
 
-## 2023 Hwasung Autonomous Driving Contest
+## Hwasung Autonomous Driving Contest
 
 _2023.10.13~2023.10.14_  
 <br>
-This project is the peak of my autonomous driving studies. I participated in the Local Team, Vision Team, an the Path-Planning Team.  
-**Keywords: #SelfDriving #WeGo-ERP42 #YOLOP #SLAM #TEB #MPC #Navfn**
+I participated in the *Localization Team*, *Vision Team*, and the *Path-Planning Team*. 
 
 ---
 

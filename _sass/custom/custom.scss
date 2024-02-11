@@ -1,8 +1,4 @@
 // custom SCSS (or CSS) goes here
-$body-font-family: "Poppins", -apple-system, BlinkMacSystemFont,
-  "helvetica neue", helvetica, "roboto", noto, "segoe ui", arial, sans-serif;
-
-
 .side-bar {
   @include mq(lg) {
     width: $nav-width;
