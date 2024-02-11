@@ -3,6 +3,7 @@ layout: default
 title: AI Semiconductor Design Contest
 parent: Projects
 nav_order: 0
+nav_exclude: true
 ---
 
 ## AI Semiconductor Design Contest

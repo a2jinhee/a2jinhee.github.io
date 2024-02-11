@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: default
 title: >
     PointPillars: Fast Encoders for Object Detection from Point Clouds
 nav_exclude: true

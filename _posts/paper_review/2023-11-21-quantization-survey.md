@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: default
 title: A Survey of Quantization Methods for Efficient Neural Network Inference
 nav_exclude: true
 parent: Paper Review

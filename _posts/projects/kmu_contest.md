@@ -3,6 +3,7 @@ layout: default
 title: KMU Autonomous Driving Contest
 parent: Projects
 nav_order: 0
+nav_exclude: true
 ---
 
 ## KMU Autonomous Driving Contest

@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: default
 title: Any-Precision Deep Neural Networks 
 nav_exclude: true
 parent: Paper Review

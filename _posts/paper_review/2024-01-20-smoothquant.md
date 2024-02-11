@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: default
 title: >
   SmoothQuant: Accurate and EfficientPost-Training Quantization for Large Language Models
 nav_exclude: true

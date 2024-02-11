@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: default
 title: >
   Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding
 nav_exclude: true

@@ -5,6 +5,7 @@ parent: Projects
 has_children: true
 has_toc: false
 nav_order: 0
+nav_exclude: true
 ---
 
 ## ICE3028 Term Project

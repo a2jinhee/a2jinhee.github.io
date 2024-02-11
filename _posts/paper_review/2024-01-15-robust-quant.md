@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: default
 title: >
   Robust Quantization: One Model to Rule Them All
 nav_exclude: true

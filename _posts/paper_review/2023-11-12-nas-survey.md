@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: default
 title: >
   Neural Architecture Search: A Survey
 nav_exclude: true
