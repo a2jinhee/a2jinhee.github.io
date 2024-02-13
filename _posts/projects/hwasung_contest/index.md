@@ -9,7 +9,6 @@ nav_exclude: true
 ---
 
 ## Hwasung Autonomous Driving Contest
-
 _2023.10.13~2023.10.14_  
 <br>
 I participated in the *Localization Team*, *Vision Team*, and the *Path-Planning Team*. 
@@ -19,7 +18,7 @@ I participated in the *Localization Team*, *Vision Team*, and the *Path-Planning
 ### Local Team
 
 - Processing LiDAR Data
-  - 3D lidar points (pcd) → 2D laser scan: [pcd-to-laserscan(doc)](https://www.notion.so/pcd-to-laserscan-a65a06f5dbe3456f82467b6c2707aaef?pvs=21)
+  - 3D lidar points (pcd) → 2D laser scan: [<i class="fa fa-paperclip" aria-hidden="true"></i> PCD to Laser Scan](pcd2laserscan.md)
   - pcd(point cloud data) processing ex) clustering
 - Detect parking space using lidar data
   - algorithm
