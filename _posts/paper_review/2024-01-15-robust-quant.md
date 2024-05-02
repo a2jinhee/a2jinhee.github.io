@@ -28,13 +28,13 @@ nav_order: 240115
 - Proposal: A generic method to produce robust quantization models. KURE- A KUrtosis REgularization term, added to the model loss function. 
 - Contribution
     1. Prove that uniformly distributed weight tensors have improved tolerance to quantization with higher SNR, and lower sensitivity to specific quantizer implementation. 
-    2. KURE- a method o uniformize the distribution of weights
+    2. KURE- a method to uniformize the distribution of weights
     3. Apply KURE to ImageNet models and demonstrate that generated models can be quantized robustly in both PTQ and QAT regimes. 
 
 ## 2. Related Work 
 
 - **Robust Quantization**
-    - (Alizadeh et al., 2020) Penalizing the L1 (norm of gradients), which requres running the backprop twice. 
+    - (Alizadeh et al., 2020) Penalizing the L1 (norm of gradients), which requires running the backprop twice. 
     - Our work promotes robustness by penalizing fourth central moment (Kurtosis), which is differentiable/trainable. 
     - We demonstrate robustness to a broader range of conditions e.g. change in quantization parameters as opposed to only changes to different bit-widths. 
     - Our method applies to both PTQ and QAT while (Alizadeh et al., 2020) focuses on PTQ.  
