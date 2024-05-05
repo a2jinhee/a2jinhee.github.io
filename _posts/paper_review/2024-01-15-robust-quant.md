@@ -50,3 +50,5 @@ nav_order: 240115
 ![](/img/2024-01-16-00-58-56.png){: width="80%"}{: .center-img}
 
 ### 3.1 Robustness to varying quantization step size
+- We show that for a tensor $X$ with a uniform distribution $Q(X)$ the variations in the region around $Q(X)$ are smaller compared with other typical distributions of weights. → Ambiguous- uniform $X$, or uniform $Q(X)$?
+- 
