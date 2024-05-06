@@ -48,7 +48,42 @@ nav_order: 240115
 
 ## 3. Model and Problem Formulation 
 ![](/img/2024-01-16-00-58-56.png){: width="80%"}{: .center-img}
+- MSE is the local distortion measure we would like to minimize
+- With respect to small changes in the optimal quantization step size, we measure the difference (sensitivity).
+- We use Lemma 1 to compare the quantization sensitivity of the Normal dist. with Uniform dist. 
 
-### 3.1 Robustness to varying quantization step size
+### 3.1 Robustness to varying quantization step size (?)
 - We show that for a tensor $X$ with a uniform distribution $Q(X)$ the variations in the region around $Q(X)$ are smaller compared with other typical distributions of weights. → Ambiguous- uniform $X$, or uniform $Q(X)$?
-- 
+  
+- Normally distributed: Sensitivity zeros only asymptotically when ∆ (and MSE) tends to infinity. This means that optimal quanti-zation is highly sensitive to changes in the quantizationprocess.
+- Uniformly distributed: The optimum ˜∆ is attainedat a region where quantization sensitivity Γ(X_U , ε) tends to zero. This means that optimal quantization is tolerant and can bear changes in the quantization process without significantly increasing the MSE.
+
+### 3.2 Robustness to varying bit-width sizes
+- MSE distortions for different bit-width whwen normal and uniform distributions are optimally quantized. 
+![](/img/2024-05-06-22-35-14.png){: width="80%"}{: .center-img}
+
+### 3.3 When robustness and optimality meet
+- For the unifom case, the optimal quantization step size in terms of $MSE(X, \tilde{\delta})$ is generally the one that optimizes the sensitivity. 
+- The second order derivative w.r.t $\delta$ for sensitivity zeroes at approximately the same location as the optimal quantization step size for MSE. 
+
+## 4. Kurtosis regularization (KURE) 
+- We use *kurtosis*- the fourth standardized moment- as a proxy to the *probability distribution*
+  
+### 4.1 Kurtosis- The fourth standardized moment
+- Kurtosis of a random variable $\mathcal{X}$
+<!-- $$
+\operatorname{Kurt}[\mathcal{X}]=\mathbb{E}\left[\left(\frac{\mathcal{X}-\mu}{\sigma}\right)^4\right]
+$$ --> 
+
+<div align="center"><img style="background: white;" src="https://latex.codecogs.com/svg.latex?%5Coperatorname%7BKurt%7D%5B%5Cmathcal%7BX%7D%5D%3D%5Cmathbb%7BE%7D%5Cleft%5B%5Cleft(%5Cfrac%7B%5Cmathcal%7BX%7D-%5Cmu%7D%7B%5Csigma%7D%5Cright)%5E4%5Cright%5D"></div>
+
+- If $\mathcal{X}$ is uniformly distributed, its kurtosis value will be 1.8, whereas if $\mathcal{X}$ is normally of Laplace distributed, its kurtosis values will be 3 and 6, respectively. 
+- We define "kurtosis target" $\mathcal{X}_T$, as the kurtosis value we want the tensor to adopt. 
+- In this case, the kurtosis target is 1.8 (uniform distribution)
+
+### 4.2 Kurtosis Loss
+- Everything below is important
+![](/img/2024-05-06-23-20-05.png){: width="100%"}{: .center-img}
+
+## 5. Experiments
+![](/img/2024-05-06-23-13-34.png){: width="90%"}{: .center-img}
