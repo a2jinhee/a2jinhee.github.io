@@ -1,7 +1,30 @@
 <hr>
 {% include toc_heading_custom.html %}
+
 <ul>
   {% for child in include.toc_list %}
+
+    <!-- year = child.nav_order/10000
+    quantile = child.nav_order%10000 -->
+    {% assign year = child.nav_order | slice: 0, 2 %}
+    {% assign month = child.nav_order | slice: 2, 2 %}
+    
+    {% if month == "01" or month == "02" or month == "03" %}
+    {% assign quantile = "Q1" %}
+    {% elsif month == "04" or month == "05" or month == "06" %}
+        {% assign quantile = "Q2" %}
+    {% elsif month == "07" or month == "08" or month == "09" %}
+        {% assign quantile = "Q3" %}
+    {% elsif month == "10" or month == "11" or month == "12" %}
+        {% assign quantile = "Q4" %}
+    {% endif %}
+
+    {% if year != year_prev or quantile != quantile_prev %}
+      {% assign year_prev = year %}
+      {% assign quantile_prev = quantile %}
+      <h3>{{year}}.{{quantile}}</h3>
+    {% endif %}
+
     <li>
       <a href="{{ child.url | relative_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
     </li>
