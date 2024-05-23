@@ -82,6 +82,16 @@ $$ -->
 - In this case, the kurtosis target is 1.8 (uniform distribution)
 
 ### 4.2 Kurtosis Loss
+- Kurtosis Loss
+<!-- $$
+\begin{align*}
+&\mathcal{L} = \mathcal{L}_p + \lambda\mathcal{L}_K \\
+&\mathcal{L}_K=\frac{1}{L} \sum_{i=1}^L\left|\operatorname{Kurt}\left[\mathcal{W}_i\right]-\mathcal{K}_T\right|^2
+\end{align*}
+$$ --> 
+
+<div align="center"><img style="background: white;" src="https://latex.codecogs.com/svg.latex?%5Cbegin%7Balign*%7D%0A%26%5Cmathcal%7BL%7D%20%3D%20%5Cmathcal%7BL%7D_p%20%2B%20%5Clambda%5Cmathcal%7BL%7D_K%20%5C%5C%0A%26%5Cmathcal%7BL%7D_K%3D%5Cfrac%7B1%7D%7BL%7D%20%5Csum_%7Bi%3D1%7D%5EL%5Cleft%7C%5Coperatorname%7BKurt%7D%5Cleft%5B%5Cmathcal%7BW%7D_i%5Cright%5D-%5Cmathcal%7BK%7D_T%5Cright%7C%5E2%0A%5Cend%7Balign*%7D"></div> 
+
 - Everything below is important
 ![](/img/2024-05-06-23-20-05.png){: width="100%"}{: .center-img}
 
