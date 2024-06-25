@@ -47,9 +47,9 @@ html,body; {
   <div>
     <span style="font-size: 30px; font-weight: bold;">Jinhee Kim</span><br>
     <span style="font-size: 18px; font-style: italic; color: #333">Undergrad in EEE at Sungkyunkwan University</span><br>
-    <span style="font-size: 15px; color: #333;"><p style="line-height: 1.2">Hello! Thanks for visiting my blog. My research interests are <br> <span style="font-weight:bold;">On-device Machine Learning · Dynamic Neural Networks · Autonomous Driving.</span></p></span>
+    <span style="font-size: 15px; color: #333;"><p style="line-height: 1.2">Hello! Thanks for visiting my blog. My research interests are <br> <span style="font-weight:bold;">On-device AI · Dynamic Neural Networks · Model Quantization.</span></p></span>
     <div class="social-icons">
-      <a href="https://drive.google.com/file/d/15Nr68tlLbvKXg_EBk_NIX0O0Q7o4oWW9/view?usp=sharing"><i class="fa-solid fa-file"></i></a>
+      <a href="https://drive.google.com/file/d/1594WJwSuFmKK-rF_cE64KRlVsCE1IHak/view?usp=sharing"><i class="fa-solid fa-file"></i></a>
       <a href="mailto:a2jinhee@gmail.com"><i class="fas fa-envelope"></i></a>
       <a href="https://github.com/a2jinhee?tab=repositories"><i class="fab fa-github"></i></a>
       <a href="https://www.linkedin.com/in/jinhee-kim-63747727b"><i class="fab fa-linkedin"></i></a>
