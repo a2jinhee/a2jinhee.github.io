@@ -38,7 +38,7 @@ nav_order: 240702
   3. At inference time, Noisy Bias is added to the input activation before quantization.
   4. Denoising bias is removed from the layer output. 
 - Proposal
-  1. Theoretically shows the possibility and proves feasible conditions for reducing the quantization error heavy-tailed distributions with a fixed additive noisy bias
+  1. Theoretically shows the possibility and proves feasible conditions for reducing the quantization error of heavy-tailed distributions with a fixed additive noisy bias
   2. Proposes NoisyQuant, a quantizer-agnostic enhancement for PTQ performance on activation quantization. NoisyQuant achieves the first success in actively refining the distribution being quantized to reduce quantization error following the theoretical results on additive noisy bias, with minimal computation overhead. 
   3. Demonstrates consistent performance improvement by applying NoisyQuant on top of existing PTQ quantizers.
 
@@ -69,8 +69,9 @@ nav_order: 240702
 3. After matmul, remove the impact of $N$ by adjusting the bias term with a denoising bias, retrieving the correct output. 
     - NoisyQuant FC computation: $f_{N_q}(X)=q_W(W)q_A(X+N)+(B-q_W(W)N)$
     - $N$ is fixed throughout inference, therefore $B'=B-q_W(W)N$ only needs to be computed once before deployment → No computation overhead in the inference process
-    - Only computation overhead brought by NoisyQuant: on-the-fly summation of $X+N$
-⚔ $B'$ and $N$ stored in INT16 to enable integer-only inference.
+    - Only computation overhead brought by NoisyQuant: on-the-fly summation of $X+N$  
+
+⚔ $B'$ and $N$ stored in INT16 to enable integer-only inference.   
 ⚔ **Noisy Bias enablex $X+N$ to have a lower quantization error than $X$ → We can also achieve lower output quantization error.** 
 
 
@@ -81,11 +82,13 @@ nav_order: 240702
 ### 5.1. Experimental settings
 ⚔️ **Dataset**
 - ImageNet for classification tasks, MSCOCO for object detection tasks. 
-- For both tasks, 1024 images are *randomly sampled as calibration data* for all PTQ methods
+- For both tasks, 1024 images are *randomly sampled as calibration data* for all PTQ methods  
+
 ⚔️ **Pretrained model architecture**
 - Uniform 6-bit and 8-bit PTQ on pretrained ViTs.
 - Classification: ViT, DeiT, and Swin by the Timm library
-- Detection: DETR w/ ResNet-50 backbone
+- Detection: DETR w/ ResNet-50 backbone  
+
 ⚔️ **Implementation Details**
 - Quantizes all weights/inputs involved in matrix multiplication (qkv-projectors, attention output projectors, MLPs, linear embeddings, and model heads) + input activation of linear layers and matmul operators 
 - Keep layer normalization/softmax operation full precision
@@ -93,4 +96,4 @@ nav_order: 240702
 - We implement NoisyQuant on top of **linear quantizer EasyQuant** and **nonlinear quantizer PTQ4ViT**
 - We decide the params. of the Noisy Bias distr. through linear search 
 ### 5.2. NoisyQuant performance
-- It is worth noting that although nonlinear quantizer like PTQ4ViT consistentl yachieves higher PTQ performance than the linear EasyQuant quantizer, the enhancement brought by NoisyQuant enables the NoisyQuant-Linear quantizer to achieve on-par or even better performance than the nonlinear PTQ4ViT, with much lower overhead in hardware deployment.
+- It is worth noting that although nonlinear quantizer like PTQ4ViT consistently achieves higher PTQ performance than the linear EasyQuant quantizer, the enhancement brought by NoisyQuant enables the NoisyQuant-Linear quantizer to achieve on-par or even better performance than the nonlinear PTQ4ViT, with much lower overhead in hardware deployment.
